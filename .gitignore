@@ -6,6 +6,14 @@ example/minimal/out/
 example/minimal/model.pth
 example/minimal/model.safetensors
 
+# Real-ESRGAN example: weights and generated ONNX / convert outputs
+example/realesrgan_x4plus_anime_6b/models/
+example/realesrgan_x4plus_anime_6b/out/
+
+# realesr-animevideov3 example
+example/realesr_animevideov3/models/
+example/realesr_animevideov3/out/
+
 # Environment and secrets
 .env
 .env.*

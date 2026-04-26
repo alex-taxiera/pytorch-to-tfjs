@@ -138,7 +138,7 @@ docker compose run --rm convert
 
 ## Real-ESRGAN notes
 
-For [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN), reuse the same network classes and loading logic as their inference scripts (e.g. RRDBNet and checkpoint keys from `inference_realesrgan.py`). Export a **fixed** low-resolution input size for smoother conversion. Tiled inference is often implemented **outside** the graph in the reference code; exporting a single-tile ONNX is the usual approach for web deployment.
+For [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN), reuse the same network classes and loading logic as their inference scripts (e.g. RRDBNet and checkpoint keys from `inference_realesrgan.py`). Export a **fixed** low-resolution input size for smoother conversion. Tiled inference is often implemented **outside** the graph in the reference code; exporting a single-tile ONNX is the usual approach for web deployment. Ready-made exports (weights under each example’s `models/`, RGB 0–1 NCHW): **RealESRGAN_x4plus_anime_6B** in `example/realesrgan_x4plus_anime_6b/`, **realesr-animevideov3** in `example/realesr_animevideov3/` — see each folder’s README.
 
 ## Troubleshooting
 
