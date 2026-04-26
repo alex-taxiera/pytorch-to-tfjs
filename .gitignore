@@ -1,0 +1,42 @@
+# Local working tree (weights, ONNX, SavedModel, TF.js outputs)
+work/
+
+# Minimal example generated artifacts
+example/minimal/out/
+example/minimal/model.pth
+example/minimal/model.safetensors
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Logs
+*.log

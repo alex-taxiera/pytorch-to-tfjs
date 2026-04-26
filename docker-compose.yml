@@ -1,0 +1,22 @@
+services:
+  export:
+    build:
+      context: .
+      dockerfile: docker/export/Dockerfile
+    volumes:
+      - ${WORK_DIR:-./work}:/work
+    environment:
+      EXPORT_SCRIPT: ${EXPORT_SCRIPT:-export_onnx.py}
+      SKIP_ORT_VALIDATION: ${SKIP_ORT_VALIDATION:-}
+      WORK_DIR: /work
+
+  convert:
+    build:
+      context: .
+      dockerfile: docker/convert/Dockerfile
+    volumes:
+      - ${WORK_DIR:-./work}:/work
+    environment:
+      ONNX_INPUT: ${ONNX_INPUT:-/work/out/model.onnx}
+      SAVED_MODEL_DIR: ${SAVED_MODEL_DIR:-/work/out/saved_model}
+      TFJS_OUTPUT_DIR: ${TFJS_OUTPUT_DIR:-/work/out/tfjs_model}
